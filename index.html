@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet">
+<script>
+    var birdSound = new Audio();
+    birdSound.src = "https://sverigesradio.se/diverse/appdata/isidor/files/3275/10926.mp3";
+
+    function birdSoundButton(){
+        btn = document.getElementById("soundButton");
+        if (btn.value == "kvittra") {
+            birdSound.play();
+            btn.value = "pausa"
+            btn.innerHTML = "Pausa!";
+        }
+        else{
+            birdSound.pause();
+            btn.value = "kvittra"
+            btn.innerHTML = "Kvittra!";
+        }
+    }
+</script>
+</head>
+<body>
+    <ul>
+        <li><a href="#bofink">Bofink</a></li>
+        <li><a href="#storlom">Storlom</a></li>
+      </ul>
+
+
+    <div id="bofink" class="birdObject">
+        <h1>
+            Bofink
+        </h1>
+        <img src="https://i.imgur.com/UdSeDrO.jpeg" class="center" alt="Bild på en Bofink.">
+
+        <figure>
+            <figcaption>Lyssna på Bofinkens läte:</figcaption>
+            <audio
+                controls
+                src="https://sverigesradio.se/diverse/appdata/isidor/files/3275/10926.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </figure>
+    </div>
+
+    <div id="storlom" class="birdObject">
+        <h1>
+            Storlom
+        </h1>
+        <img src="https://i.imgur.com/JcZibdj.jpg" class="center" alt="Bild på en Storlom.">
+
+        <figure>
+            <figcaption>Lyssna på Storlomens läte:</figcaption>
+            <audio
+                controls
+                src="https://sverigesradio.se/diverse/appdata/isidor/files/3275/13887.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </figure>
+
+    </div>
+
+    <!---
+    <button id="soundButton" class="birdSoundButton" onclick="birdSoundButton()" value="kvittra">Kvittra!</button>
+    --->
+    
+
+</body>
+
+</html>
